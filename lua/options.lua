@@ -61,4 +61,16 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- set tab to space
+vim.opt.expandtab = true
+vim.opt.softtabstop = 2
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+
+-- remove tailing space
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*',
+  command = [[:%s/\s\+$//e]],
+})
+
 -- vim: ts=2 sts=2 sw=2 et
