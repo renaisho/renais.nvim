@@ -45,4 +45,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- reload neovim config
+vim.keymap.set('n', '<leader>nr', function()
+  vim.cmd('luafile ' .. vim.fn.stdpath 'config' .. '/init.lua')
+end, { desc = '[R]eload [N]eovim config' })
+
 -- vim: ts=2 sts=2 sw=2 et
