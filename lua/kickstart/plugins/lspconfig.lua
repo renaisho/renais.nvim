@@ -181,6 +181,12 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
+        angularls = {},
+        ts_ls = {},
+        nginx_language_server = {},
+        yamlls = {},
+        dockerls = {},
+        docker_compose_language_service = {},
         pyright = {
           flags = {
             semanticTokens = false,
